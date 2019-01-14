@@ -12,7 +12,7 @@
             User name: <input type='text' name='reg-user'><br><br>
             Email: <input type='text' name='reg-email'><br><br>
             Password: <input type='password' name='reg-password'><br><br>
-            Organisation: <input type='selection' name='organisation'><br><br>
+            Organisation: <input type='selection' name='reg-org'><br><br>
             <input type='submit' name='submit' value='Submit'>
         </form>
     </body>
