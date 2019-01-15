@@ -1,6 +1,6 @@
 <?php
 
-require('mysqlconn.php');
+require('mysqliconn.php');
 $regData = $_POST;
 $tblName = 'tbl_reg';
 
@@ -26,4 +26,6 @@ function insertDB($regData)
     $stmt->execute();
     $stmt->close();
 }
+
+
 
