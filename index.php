@@ -12,7 +12,16 @@
             User name: <input type='text' name='reg-user' value='kebabas'><br><br>
             Email: <input type='text' name='reg-email' value='kebabas@kebabas.lt'><br><br>
             Password: <input type='password' name='reg-password' value='kebabas'><br><br>
-            Organisation: <input type='selection' name='reg-org' value='dar vienas kebabas'><br><br>
+            <?php
+            require('mysqliconn.php');
+            $dbResult = getOrganisationDB('tbl_org');
+            ?>
+            Organisation:   <select>
+                                <?php foreach($dbResult as $item): ?>
+                                    <option value=''><?php echo $item; ?></option>
+                                <?php endforeach; ?>
+                            </select>
+            <br><br>
             <input type='submit' name='submit' value='Submit'>
         </form>
     </body>
